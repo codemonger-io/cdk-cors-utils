@@ -6,7 +6,7 @@ Provides utilities to configure CORS for [Amazon API Gateway (API Gateway)](http
 
 ## For whom is this library?
 
-This library would help you if you feel tiresome to repeat CORS settings for API Gateway with CDK.
+This library would help you if you feel tiresome of repeating CORS settings for API Gateway with CDK.
 
 ## Background
 
