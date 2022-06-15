@@ -21,7 +21,32 @@ const DEFAULT_HEADERS = `'${apigateway.Cors.DEFAULT_HEADERS.join(',')}'`;
 // and surrounds it with quotation marks.
 const ALL_METHODS = `'${apigateway.Cors.ALL_METHODS.join(',')}'`;
 
-/** Makes given `IntegrationResponses` allow CORS. */
+/**
+ * Makes given {@link https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.IntegrationResponse.html | IntegrationResponse}s allow CORS.
+ *
+ * @beta
+ *
+ * @remarks
+ *
+ * Configures the following response headers,
+ *
+ * - `Access-Control-Allow-Origin`: `*`
+ *
+ * - `Access-Control-Allow-Headers`: headers equivalent to
+ *   {@link https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.Cors.html#static-default_headers | aws_apigateway.Cors.DEFAULT_HEADERS}
+ *
+ * - `Access-Control-Allow-Methods`: methods equivalent to
+ *   {@link https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.Cors.html#static-all_methods | aws_apigateway.Cors.ALL_METHODS}
+ *
+ * @param responses -
+ *
+ *   Integration response settings to allow CORS.
+ *
+ * @returns
+ *
+ *   `responses` with updated
+ *   {@link https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.IntegrationResponse.html#responseparameters | responseParameters}.
+ */
 export function makeIntegrationResponsesAllowCors(
   responses: apigateway.IntegrationResponse[],
 ): apigateway.IntegrationResponse[] {
@@ -31,7 +56,30 @@ export function makeIntegrationResponsesAllowCors(
   return responses;
 }
 
-/** Makes given `MethodResponses` allow CORS. */
+/**
+ * Makes given {@link https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.MethodResponse.html | MethodResponse}s allow CORS.
+ *
+ * @beta
+ *
+ * @remarks
+ *
+ * Marks the following response headers included,
+ *
+ * - `Access-Control-Allow-Origin`
+ *
+ * - `Access-Control-Allow-Headers`
+ *
+ * - `Access-Control-Allow-Methods`
+ *
+ * @param responses -
+ *
+ *   Method response settings to allow CORS.
+ *
+ * @returns
+ *
+ *   `responses` with updated
+ *   {@link https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.MethodResponse.html#responseparameters | responseParameters}.
+ */
 export function makeMethodResponsesAllowCors(
   responses: apigateway.MethodResponse[],
 ): apigateway.MethodResponse[] {
