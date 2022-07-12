@@ -12,22 +12,24 @@ Makes given [IntegrationResponse](https://docs.aws.amazon.com/cdk/api/v2/docs/aw
 <b>Signature:</b>
 
 ```typescript
-export declare function makeIntegrationResponsesAllowCors(responses: apigateway.IntegrationResponse[]): apigateway.IntegrationResponse[];
+export declare function makeIntegrationResponsesAllowCors<T extends apigateway.IntegrationResponse>(responses: T[]): T[];
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  responses | apigateway.IntegrationResponse\[\] | Integration response settings to allow CORS. |
+|  responses | T\[\] | Integration response settings to allow CORS. |
 
 <b>Returns:</b>
 
-apigateway.IntegrationResponse\[\]
+T\[\]
 
 `responses` with updated [responseParameters](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.IntegrationResponse.html#responseparameters)<!-- -->.
 
 ## Remarks
+
+This function accepts any subclass `T` of [aws\_apigateway.IntegrationResponse](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.IntegrationResponse.html)<!-- -->.
 
 Configures the following response headers,
 
