@@ -18,7 +18,7 @@ API GatewayでREST APIを記述するとき、私はいつもCORSを扱うため
 このレポジトリをNodeの依存関係に追加してください。
 
 ```sh
-npm install https://github.com/codemonger-io/cdk-cors-utils.git#v0.1.0
+npm install https://github.com/codemonger-io/cdk-cors-utils.git#v0.2.0
 ```
 
 インストールしたモジュールは`cdk2-cors-utils`として以下のように利用できます。

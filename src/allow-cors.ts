@@ -28,6 +28,9 @@ const ALL_METHODS = `'${apigateway.Cors.ALL_METHODS.join(',')}'`;
  *
  * @remarks
  *
+ * This function accepts any subclass `T` of
+ * {@link https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.IntegrationResponse.html | aws_apigateway.IntegrationResponse}.
+ *
  * Configures the following response headers,
  *
  * - `Access-Control-Allow-Origin`: `*`
@@ -47,9 +50,9 @@ const ALL_METHODS = `'${apigateway.Cors.ALL_METHODS.join(',')}'`;
  *   `responses` with updated
  *   {@link https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.IntegrationResponse.html#responseparameters | responseParameters}.
  */
-export function makeIntegrationResponsesAllowCors(
-  responses: apigateway.IntegrationResponse[],
-): apigateway.IntegrationResponse[] {
+export function makeIntegrationResponsesAllowCors<T extends apigateway.IntegrationResponse>(
+  responses: T[],
+): T[] {
   responses = setResponseParameters(responses, ALLOW_ORIGIN, ALL_ORIGINS);
   responses = setResponseParameters(responses, ALLOW_HEADERS, DEFAULT_HEADERS);
   responses = setResponseParameters(responses, ALLOW_METHODS, ALL_METHODS);
@@ -62,6 +65,9 @@ export function makeIntegrationResponsesAllowCors(
  * @beta
  *
  * @remarks
+ *
+ * This function accepts any subclass `T` of
+ * {@link https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.MethodResponse.html | aws_apigateway.MethodResponse }.
  *
  * Marks the following response headers included,
  *
@@ -80,9 +86,9 @@ export function makeIntegrationResponsesAllowCors(
  *   `responses` with updated
  *   {@link https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.MethodResponse.html#responseparameters | responseParameters}.
  */
-export function makeMethodResponsesAllowCors(
-  responses: apigateway.MethodResponse[],
-): apigateway.MethodResponse[] {
+export function makeMethodResponsesAllowCors<T extends apigateway.MethodResponse>(
+  responses: T[],
+): T[] {
   responses = setResponseParameters(responses, ALLOW_ORIGIN, true);
   responses = setResponseParameters(responses, ALLOW_HEADERS, true);
   responses = setResponseParameters(responses, ALLOW_METHODS, true);

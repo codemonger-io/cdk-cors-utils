@@ -12,22 +12,24 @@ Makes given [MethodResponse](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk
 <b>Signature:</b>
 
 ```typescript
-export declare function makeMethodResponsesAllowCors(responses: apigateway.MethodResponse[]): apigateway.MethodResponse[];
+export declare function makeMethodResponsesAllowCors<T extends apigateway.MethodResponse>(responses: T[]): T[];
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  responses | apigateway.MethodResponse\[\] | Method response settings to allow CORS. |
+|  responses | T\[\] | Method response settings to allow CORS. |
 
 <b>Returns:</b>
 
-apigateway.MethodResponse\[\]
+T\[\]
 
 `responses` with updated [responseParameters](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.MethodResponse.html#responseparameters)<!-- -->.
 
 ## Remarks
+
+This function accepts any subclass `T` of [aws\_apigateway.MethodResponse](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.MethodResponse.html)<!-- -->.
 
 Marks the following response headers included,
 
