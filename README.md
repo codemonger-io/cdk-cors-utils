@@ -18,7 +18,7 @@ These functions are quite simple though, I no longer want to prepare them everyt
 Please add this repository to your Node dependencies.
 
 ```sh
-npm install https://github.com/codemonger-io/cdk-cors-utils.git#v0.1.0
+npm install https://github.com/codemonger-io/cdk-cors-utils.git#v0.2.0
 ```
 
 The installed module will be available as `cdk2-cors-utils` like the following,
