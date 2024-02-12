@@ -10,7 +10,7 @@ CDKでAPI Gatewayに繰り返しCORS設定をするのが面倒でしょうが�
 
 ## 背景
 
-API GatewayでREST APIを記述するとき、私はいつもCORSを扱うためのユーティリティ関数をいくつか書いています。
+API GatewayでREST APIを記述するとき、いつもCORSを扱うためのユーティリティ関数をいくつか書いています。
 これらの関数はとてもシンプルですが、新しいプロジェクトを始めるたびにもう毎回準備したくありません。
 
 ## インストール方法
@@ -18,7 +18,7 @@ API GatewayでREST APIを記述するとき、私はいつもCORSを扱うため
 このレポジトリをNodeの依存関係に追加してください。
 
 ```sh
-npm install https://github.com/codemonger-io/cdk-cors-utils.git#v0.2.0
+npm install https://github.com/codemonger-io/cdk-cors-utils.git#v0.3.0
 ```
 
 インストールしたモジュールは`cdk2-cors-utils`として以下のように利用できます。
