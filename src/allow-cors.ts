@@ -95,6 +95,64 @@ export function makeMethodResponsesAllowCors<T extends apigateway.MethodResponse
   return responses;
 }
 
+/**
+ * Makes given {@link https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.IntegrationResponse.html | IntegrationResponse}s allow an origin.
+ *
+ * @remarks
+ *
+ * Configures `Access-Control-Allow-Origin` response header to accept `origin`.
+ *
+ * @param responses -
+ *
+ *   Integration response settings to allow an origin.
+ *
+ * @param origin -
+ *
+ *   Origin to allow.
+ *   If it does not start with a quotation mark, this function surrounds it with
+ *   quotation marks.
+ *
+ * @returns
+ *
+ *   `responses` with updated
+ *   {@link https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.IntegrationResponse.html#responseparameters | responseParameters}.
+ *
+ * @beta
+ */
+export function makeIntegrationResponsesAllowOrigin<T extends apigateway.IntegrationResponse>(
+  responses: T[],
+  origin: string,
+): T[] {
+  if (!origin.startsWith("'")) {
+    origin = `'${origin}'`;
+  }
+  return setResponseParameters(responses, ALLOW_ORIGIN, origin);
+}
+
+/**
+ * Makes given {@link https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.MethodResponse.html | MethodResponse}s allow an origin.
+ *
+ * @remarks
+ *
+ * Marks `Access-Control-Allow-Origin` response header included.
+ *
+ * @param responses -
+ *
+ *   Method response settings to allow an origin.
+ *
+ * @returns
+ *
+ *   `responses` with updated
+ *   {@link https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.MethodResponse.html#responseparameters | responseParameters}.
+ *
+ * @beta
+ */
+export function makeMethodResponsesAllowOrigin<T extends apigateway.MethodResponse>(
+  responses: T[],
+): T[] {
+  return setResponseParameters(responses, ALLOW_ORIGIN, true);
+}
+
 // Sets the value of a given response header.
 function setResponseParameters<T, U extends Response<T>>(
   responses: U[],

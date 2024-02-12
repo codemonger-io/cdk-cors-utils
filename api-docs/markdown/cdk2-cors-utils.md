@@ -10,6 +10,8 @@ Utilities to configure CORS for [Amazon API Gateway](https://docs.aws.amazon.com
 
 |  Function | Description |
 |  --- | --- |
-|  [makeIntegrationResponsesAllowCors(responses)](./cdk2-cors-utils.makeintegrationresponsesallowcors.md) | <b><i>(BETA)</i></b> Makes given [IntegrationResponse](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.IntegrationResponse.html)<!-- -->s allow CORS. |
-|  [makeMethodResponsesAllowCors(responses)](./cdk2-cors-utils.makemethodresponsesallowcors.md) | <b><i>(BETA)</i></b> Makes given [MethodResponse](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.MethodResponse.html)<!-- -->s allow CORS. |
+|  [makeIntegrationResponsesAllowCors(responses)](./cdk2-cors-utils.makeintegrationresponsesallowcors.md) | **_(BETA)_** Makes given [IntegrationResponse](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.IntegrationResponse.html)<!-- -->s allow CORS. |
+|  [makeIntegrationResponsesAllowOrigin(responses, origin)](./cdk2-cors-utils.makeintegrationresponsesalloworigin.md) | **_(BETA)_** Makes given [IntegrationResponse](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.IntegrationResponse.html)<!-- -->s allow an origin. |
+|  [makeMethodResponsesAllowCors(responses)](./cdk2-cors-utils.makemethodresponsesallowcors.md) | **_(BETA)_** Makes given [MethodResponse](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.MethodResponse.html)<!-- -->s allow CORS. |
+|  [makeMethodResponsesAllowOrigin(responses)](./cdk2-cors-utils.makemethodresponsesalloworigin.md) | **_(BETA)_** Makes given [MethodResponse](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.MethodResponse.html)<!-- -->s allow an origin. |
 

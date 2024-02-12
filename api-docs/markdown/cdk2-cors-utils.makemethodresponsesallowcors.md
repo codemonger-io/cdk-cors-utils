@@ -4,12 +4,12 @@
 
 ## makeMethodResponsesAllowCors() function
 
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
 Makes given [MethodResponse](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_apigateway.MethodResponse.html)<!-- -->s allow CORS.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function makeMethodResponsesAllowCors<T extends apigateway.MethodResponse>(responses: T[]): T[];
@@ -21,7 +21,7 @@ export declare function makeMethodResponsesAllowCors<T extends apigateway.Method
 |  --- | --- | --- |
 |  responses | T\[\] | Method response settings to allow CORS. |
 
-<b>Returns:</b>
+**Returns:**
 
 T\[\]
 
