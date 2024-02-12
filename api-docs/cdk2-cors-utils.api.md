@@ -10,6 +10,12 @@ import { aws_apigateway } from 'aws-cdk-lib';
 export function makeIntegrationResponsesAllowCors<T extends aws_apigateway.IntegrationResponse>(responses: T[]): T[];
 
 // @beta
+export function makeIntegrationResponsesAllowOrigin<T extends aws_apigateway.IntegrationResponse>(responses: T[], origin: string): T[];
+
+// @beta
 export function makeMethodResponsesAllowCors<T extends aws_apigateway.MethodResponse>(responses: T[]): T[];
+
+// @beta
+export function makeMethodResponsesAllowOrigin<T extends aws_apigateway.MethodResponse>(responses: T[]): T[];
 
 ```
