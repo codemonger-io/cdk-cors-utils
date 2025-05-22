@@ -1,6 +1,6 @@
 {
-  "name": "cdk2-cors-utils",
-  "version": "0.3.0",
+  "name": "@codemonger-io/cdk-cors-utils",
+  "version": "0.4.0",
   "description": "CORS utilities for CDK v2",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
