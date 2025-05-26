@@ -18,13 +18,13 @@ API GatewayでREST APIを記述するとき、いつもCORSを扱うためのユ
 このレポジトリをNodeの依存関係に追加してください。
 
 ```sh
-npm install https://github.com/codemonger-io/cdk-cors-utils.git#v0.3.0
+npm install https://github.com/codemonger-io/cdk-cors-utils.git#v0.4.0
 ```
 
-インストールしたモジュールは`cdk2-cors-utils`として以下のように利用できます。
+インストールしたモジュールは`@codemonger-io/cdk-cors-utils`として以下のように利用できます。
 
 ```js
-import { makeIntegrationResponsesAllowCors } from 'cdk2-cors-utils';
+import { makeIntegrationResponsesAllowCors } from '@codemonger-io/cdk-cors-utils';
 ```
 
 このライブラリはCDK v2.x用に設計されており、CDK v1.xでは使えません。

@@ -1,6 +1,6 @@
 {
-  "name": "cdk2-cors-utils",
-  "version": "0.3.0",
+  "name": "@codemonger-io/cdk-cors-utils",
+  "version": "0.4.0",
   "description": "CORS utilities for CDK v2",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -10,9 +10,9 @@
     "tsconfig.json"
   ],
   "scripts": {
-    "build": "tsc",
-    "doc": "npm run build && api-extractor run --local && api-documenter markdown --input-folder temp --output-folder api-docs/markdown",
-    "prepare": "npm run build",
+    "build": "rimraf dist && tsc",
+    "doc": "run-s build && api-extractor run --local && api-documenter markdown --input-folder temp --output-folder api-docs/markdown",
+    "prepare": "run-s build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -25,10 +25,12 @@
     "node": ">=12.0.0"
   },
   "devDependencies": {
-    "@microsoft/api-documenter": "7.23.23",
-    "@microsoft/api-extractor": "7.40.1",
+    "@microsoft/api-documenter": "^7.26.27",
+    "@microsoft/api-extractor": "^7.52.8",
     "aws-cdk-lib": "^2.127.0",
-    "typescript": "5.3.3"
+    "npm-run-all2": "^8.0.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "aws-cdk-lib": ">=2.0.0"
