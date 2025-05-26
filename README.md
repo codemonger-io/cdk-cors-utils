@@ -18,13 +18,13 @@ These functions are quite simple though, I no longer want to prepare them everyt
 Please add this repository to your Node dependencies.
 
 ```sh
-npm install https://github.com/codemonger-io/cdk-cors-utils.git#v0.3.0
+npm install https://github.com/codemonger-io/cdk-cors-utils.git#v0.4.0
 ```
 
-The installed module will be available as `cdk2-cors-utils` like the following,
+The installed module will be available as `@codemonger-io/cdk-cors-utils` like the following,
 
 ```js
-import { makeIntegrationResponsesAllowCors } from 'cdk2-cors-utils';
+import { makeIntegrationResponsesAllowCors } from '@codemonger-io/cdk-cors-utils';
 ```
 
 This library is designed for CDK v2.x, and does not work with CDK v1.x.
