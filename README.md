@@ -29,6 +29,40 @@ import { makeIntegrationResponsesAllowCors } from '@codemonger-io/cdk-cors-utils
 
 This library is designed for CDK v2.x, and does not work with CDK v1.x.
 
+### Installing from GitHub Packages
+
+Every time commits are pushed to the `main` branch, a *developer package* is published to the npm registry managed by GitHub Packages.
+A *developer package* bears the next release number but followed by a dash (`-`) plus the short commit hash; e.g., `0.4.0-abc1234` where `abc1234` is the short commit hash of the commit used to build the package (*snapshot*).
+You can find *developer packages* [here](https://github.com/orgs/codemonger-io/packages?repo_name=cdk-cors-utils).
+
+#### Configuring a GitHub personal access token
+
+To install a *developer package*, you need to configure a **classic** GitHub personal access token (PAT) with at least the `read:packages` scope.
+Below briefly explains how to configure a PAT.
+Please refer to the [GitHub documentation](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry) for more details.
+
+Once you have a PAT, please create a `.npmrc` file in your home directory with the following content:
+
+```
+//npm.pkg.github.com/:_authToken=$YOUR_GITHUB_PAT
+```
+
+Please replace `$YOUR_GITHUB_PAT` with your PAT.
+
+In the root directory of your project, please create a `.npmrc` file with the following content:
+
+```
+@codemonger-io:registry=https://npm.pkg.github.com
+```
+
+Then you can install a *developer package* with the following command:
+
+```sh
+npm install @codemonger-io/cdk-cors-utils@0.4.0-abc1234
+```
+
+Please replace `abc1234` with the short commit hash of the *snapshot* you want to install.
+
 ## APIs
 
 Please refer to [`api-docs/markdown/index.md`](./api-docs/markdown/index.md).
@@ -41,10 +75,10 @@ TBD
 
 ### Transpiling TypeScript files
 
-`build` script transplies TypeScript files in the `src` folder.
+`build` script transpiles TypeScript files in the `src` folder.
 
 ```sh
-npm run build
+pnpm build
 ```
 
 You will find transpiled JavaScript (`*.js`) and type declaration (`*.d.ts`) files created in a folder `dist`.
@@ -54,7 +88,7 @@ You will find transpiled JavaScript (`*.js`) and type declaration (`*.d.ts`) fil
 `doc` script generates the API documentation.
 
 ```sh
-npm run doc
+pnpm doc
 ```
 
 You will find markdown files updated in the folder `api-docs/markdown`.
