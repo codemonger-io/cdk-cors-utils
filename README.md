@@ -75,7 +75,7 @@ TBD
 
 ### Transpiling TypeScript files
 
-`build` script transplies TypeScript files in the `src` folder.
+`build` script transpiles TypeScript files in the `src` folder.
 
 ```sh
 pnpm build
