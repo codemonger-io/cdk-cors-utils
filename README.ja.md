@@ -58,7 +58,7 @@ PATが手に入ったら以下の内容の`.npmrc`ファイルをホームディ
 これで以下のコマンドで*開発者用パッケージ*をインストールできます。
 
 ```sh
-npm install @codemonger-io/cdk-cors-utils@0.2.0-abc1234
+npm install @codemonger-io/cdk-cors-utils@0.4.0-abc1234
 ```
 
 `abc1234`はインストールしたい*スナップショット*の短いコミットハッシュに置き換えてください。

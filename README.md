@@ -58,7 +58,7 @@ In the root directory of your project, please create a `.npmrc` file with the fo
 Then you can install a *developer package* with the following command:
 
 ```sh
-npm install @codemonger-io/cdk-cors-utils@0.2.0-abc1234
+npm install @codemonger-io/cdk-cors-utils@0.4.0-abc1234
 ```
 
 Please replace `abc1234` with the short commit hash of the *snapshot* you want to install.
