@@ -29,6 +29,40 @@ import { makeIntegrationResponsesAllowCors } from '@codemonger-io/cdk-cors-utils
 
 このライブラリはCDK v2.x用に設計されており、CDK v1.xでは使えません。
 
+### GitHub Packagesからインストールする
+
+`main`ブランチにコミットがプッシュされるたびに、*開発者用パッケージ*がGitHub Packagesの管理するnpmレジストリにパブリッシュされます。
+*開発者用パッケージ*のバージョンは次のリリースバージョンにハイフン(`-`)と短いコミットハッシュをつなげたものになります。例、`0.4.0-abc1234` (`abc1234`はパッケージをビルドするのに使ったコミット(*スナップショット*)の短いコミットハッシュ)。
+*開発者用パッケージ*は[こちら](https://github.com/orgs/codemonger-io/packages?repo_name=cdk-cors-utils)にあります。
+
+#### GitHubパーソナルアクセストークンの設定
+
+*開発者用パッケージ*をインストールするには、最低限`read:packages`スコープの*クラシック*GitHubパーソナルアクセストークン(PAT)を設定する必要があります。
+以下、簡単にPATの設定方法を説明します。
+より詳しくは[GitHubのドキュメント](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)をご参照ください。
+
+PATが手に入ったら以下の内容の`.npmrc`ファイルをホームディレクトリに作成してください。
+
+```
+//npm.pkg.github.com/:_authToken=$YOUR_GITHUB_PAT
+```
+
+`$YOUR_GITHUB_PAT`はご自身のPATに置き換えてください。
+
+プロジェクトのルートディレクトリに以下の内容の`.npmrc`ファイルを作成してください。
+
+```
+@codemonger-io:registry=https://npm.pkg.github.com
+```
+
+これで以下のコマンドで*開発者用パッケージ*をインストールできます。
+
+```sh
+npm install @codemonger-io/cdk-cors-utils@0.2.0-abc1234
+```
+
+`abc1234`はインストールしたい*スナップショット*の短いコミットハッシュに置き換えてください。
+
 ## API
 
 [`api-docs/markdown/index.md`](./api-docs/markdown/index.md)を参照ください(**英語版のみ**)。
@@ -44,7 +78,7 @@ TBD
 `build`スクリプトは`src`フォルダ内のTypeScriptファイルをトランスパイルします。
 
 ```sh
-npm run build
+pnpm build
 ```
 
 トランスパイルされたJavaScript(`*.js`)ファイルと型宣言(`*.d.ts`)ファイルが`dist`フォルダに作られます。
@@ -54,7 +88,7 @@ npm run build
 `doc`スクリプトはAPIドキュメントを生成します。
 
 ```sh
-npm run doc
+pnpm doc
 ```
 
 `api-docs/markdown`フォルダ内のMarkdownファイルが更新されます。
