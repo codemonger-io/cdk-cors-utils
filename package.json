@@ -12,6 +12,7 @@
   "scripts": {
     "build": "rimraf dist && tsc",
     "doc": "run-s build && api-extractor run --local && api-documenter markdown --input-folder temp --output-folder api-docs/markdown",
+    "type-check": "tsc --noEmit",
     "prepare": "run-s build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
