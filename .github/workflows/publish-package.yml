@@ -69,4 +69,5 @@ jobs:
       - name: Build and publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm-token }}
-        run: pnpm publish --no-git-checks
+          DEV_PACKAGE_TAG: dev-${{ steps.package-info.outputs.version }}-${{ steps.commit-hash.outputs.short-commit-hash }}
+        run: pnpm publish --no-git-checks --tag $DEV_PACKAGE_TAG
