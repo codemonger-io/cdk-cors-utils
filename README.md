@@ -18,7 +18,7 @@ These functions are quite simple though, I no longer want to prepare them everyt
 Please add this repository to your Node dependencies.
 
 ```sh
-npm install https://github.com/codemonger-io/cdk-cors-utils.git#v0.4.0
+npm install https://github.com/codemonger-io/cdk-cors-utils.git#v0.4.1
 ```
 
 The installed module will be available as `@codemonger-io/cdk-cors-utils` like the following,
@@ -32,7 +32,7 @@ This library is designed for CDK v2.x, and does not work with CDK v1.x.
 ### Installing from GitHub Packages
 
 Every time commits are pushed to the `main` branch, a *developer package* is published to the npm registry managed by GitHub Packages.
-A *developer package* bears the next release number but followed by a dash (`-`) plus the short commit hash; e.g., `0.4.0-abc1234` where `abc1234` is the short commit hash of the commit used to build the package (*snapshot*).
+A *developer package* bears the next release number but followed by a dash (`-`) plus the short commit hash; e.g., `0.4.1-abc1234` where `abc1234` is the short commit hash of the commit used to build the package (*snapshot*).
 You can find *developer packages* [here](https://github.com/orgs/codemonger-io/packages?repo_name=cdk-cors-utils).
 
 #### Configuring a GitHub personal access token
@@ -58,7 +58,7 @@ In the root directory of your project, please create a `.npmrc` file with the fo
 Then you can install a *developer package* with the following command:
 
 ```sh
-npm install @codemonger-io/cdk-cors-utils@0.4.0-abc1234
+npm install @codemonger-io/cdk-cors-utils@0.4.1-abc1234
 ```
 
 Please replace `abc1234` with the short commit hash of the *snapshot* you want to install.
