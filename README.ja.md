@@ -18,7 +18,7 @@ API GatewayでREST APIを記述するとき、いつもCORSを扱うためのユ
 このレポジトリをNodeの依存関係に追加してください。
 
 ```sh
-npm install https://github.com/codemonger-io/cdk-cors-utils.git#v0.4.0
+npm install https://github.com/codemonger-io/cdk-cors-utils.git#v0.4.1
 ```
 
 インストールしたモジュールは`@codemonger-io/cdk-cors-utils`として以下のように利用できます。
@@ -32,7 +32,7 @@ import { makeIntegrationResponsesAllowCors } from '@codemonger-io/cdk-cors-utils
 ### GitHub Packagesからインストールする
 
 `main`ブランチにコミットがプッシュされるたびに、*開発者用パッケージ*がGitHub Packagesの管理するnpmレジストリにパブリッシュされます。
-*開発者用パッケージ*のバージョンは次のリリースバージョンにハイフン(`-`)と短いコミットハッシュをつなげたものになります。例、`0.4.0-abc1234` (`abc1234`はパッケージをビルドするのに使ったコミット(*スナップショット*)の短いコミットハッシュ)。
+*開発者用パッケージ*のバージョンは次のリリースバージョンにハイフン(`-`)と短いコミットハッシュをつなげたものになります。例、`0.4.1-abc1234` (`abc1234`はパッケージをビルドするのに使ったコミット(*スナップショット*)の短いコミットハッシュ)。
 *開発者用パッケージ*は[こちら](https://github.com/orgs/codemonger-io/packages?repo_name=cdk-cors-utils)にあります。
 
 #### GitHubパーソナルアクセストークンの設定
@@ -58,7 +58,7 @@ PATが手に入ったら以下の内容の`.npmrc`ファイルをホームディ
 これで以下のコマンドで*開発者用パッケージ*をインストールできます。
 
 ```sh
-npm install @codemonger-io/cdk-cors-utils@0.4.0-abc1234
+npm install @codemonger-io/cdk-cors-utils@0.4.1-abc1234
 ```
 
 `abc1234`はインストールしたい*スナップショット*の短いコミットハッシュに置き換えてください。
